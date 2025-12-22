@@ -21,6 +21,66 @@ body {
   color: var(--text);
   background: var(--background);
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #F6F3EE 0%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.preloader-logo-wrapper {
+  animation: logoFloat 2s ease-in-out infinite;
+}
+
+.preloader-logo {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+}
+
+.preloader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(201, 164, 76, 0.2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Hide browser default scroll indicators */
@@ -761,6 +821,16 @@ h1, h2, h3 {
   .btn-contact {
     min-width: 100%;
     width: 100%;
+  }
+
+  .preloader-logo {
+    width: 140px;
+  }
+
+  .preloader-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
   }
 }
 
