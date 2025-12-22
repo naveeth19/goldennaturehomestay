@@ -204,7 +204,7 @@ h1, h2, h3 {
   padding: 0;
   margin: 0 0 16px;
   font-size: 18px;
-  color: #555;
+  color: #1a1a1a;
   font-weight: 500;
 }
 
@@ -220,7 +220,7 @@ h1, h2, h3 {
 .hero-highlights {
   margin: 8px 0 28px;
   font-weight: 500;
-  color: #666;
+  color: #1a1a1a;
   font-size: 16px;
   line-height: 1.6;
 }
