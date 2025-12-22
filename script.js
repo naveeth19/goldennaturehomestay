@@ -1,5 +1,6 @@
-const phoneNumber = '+910000000000'; // Update with real phone number
-const whatsappNumber = '+910000000000'; // Update with real WhatsApp number
+const phoneNumber = '+919845033833'; // Primary phone number
+const phoneNumber2 = '+919902933877'; // Secondary phone number
+const whatsappNumber = '+919902933877'; // WhatsApp number
 
 const initHeroSwiper = () => {
   return new Swiper('.hero-slider', {
