@@ -128,7 +128,24 @@ const initContactLinks = () => {
   }
 };
 
+const initPreloader = () => {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  // Hide preloader when page is fully loaded
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      preloader.classList.add('hidden');
+      // Remove from DOM after animation
+      setTimeout(() => {
+        preloader.remove();
+      }, 600);
+    }, 800); // Show for at least 800ms for smooth experience
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initHeroSwiper();
   initGallerySwiper();
   cycleTaglines();
